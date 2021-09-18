@@ -1,6 +1,7 @@
 from django.apps import apps
 from django.db.models.signals import m2m_changed, pre_delete
 from django.utils.translation import ugettext_lazy as _
+from django.db import models
 
 from mayan.apps.acls.classes import ModelPermission
 from mayan.apps.acls.links import link_acl_list
@@ -71,6 +72,18 @@ class TagsApp(MayanAppConfig):
         Document.add_to_class(name='get_tags', value=method_document_get_tags)
 
         EventModelRegistry.register(model=Tag)
+        try: 
+            test = Tag.objects.create(label="Saquib", color="FFFFFF")
+            test.save()
+        except:
+            pass
+        try: 
+            user = ["Nada", "Erin", "Jumana", "Ira"]
+            for i in user: 
+                temp = Tag.objects.create(label=i, color="FFFFFF")
+                temp.save()
+        except: 
+            pass
 
         ModelCopy(
             model=Tag, bind_link=True, register_permission=True
