@@ -72,12 +72,9 @@ class TagsApp(MayanAppConfig):
         Document.add_to_class(name='get_tags', value=method_document_get_tags)
 
         EventModelRegistry.register(model=Tag)
+        # Adding tags from the backend 
         try: 
-            test = Tag.objects.create(label="Saquib", color="FFFFFF")
-            test.save()
-        except:
-            pass
-        try: 
+            # list of tags to be added 
             user = ["Nada", "Erin", "Jumana", "Ira"]
             for i in user: 
                 temp = Tag.objects.create(label=i, color="FFFFFF")
