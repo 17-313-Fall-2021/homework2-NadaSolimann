@@ -85,5 +85,5 @@ at: https://docs.mayan-edms.com/parts/installation.html
 - [Translations](https://www.transifex.com/rosarior/mayan-edms/)
 - [Videos](https://www.youtube.com/channel/UCJOOXHP1MJ9lVA7d8ZTlHPw)
 
-Please find the documentation of the feature implemented by Team Bug Busters at the location mayan/apps/tags/README.md
+Please find the documentation of the feature implemented by Team Bug Busters at the location mayan/apps/tags/README.md  
 Additionally, Daily SCRUM Meetings Log can also be found under the same directory: mayan/apps/tags
