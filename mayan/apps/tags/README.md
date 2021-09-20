@@ -2,9 +2,11 @@
 This repository module adds a method for reviewer assignment and management integrated with the Mayan EDMS software. This new feature makes use of Mayan’s existing tags implementation to allow for an automated and more efficient way to assign multiple reviewers to documents, view the assigned reviewers to a specific document, view the assigned documents to a specific reviewer and search through documents by reviewers. This is done through automating batch tag creation from the backend, where tags are automatically created in one batch for each reviewer in the reviewers list specified by the admin user in the code. This feature is meant for the use of managers and admins for reviewer management, but can also be used by regular users for faster batch tag creation.
 
 **How to Use the Feature:**
-  1. Navigate to the apps.py file under the directory “mayan/apps/tags”
-  2. Locate the list named “user” inside the ready function 
-  3. Edit the list to include the the tag labels (as strings) you would like to add from the backend 
+1. Fork the Github repository
+2. Navigate to the “apps.py” file under the directory “mayan/apps/tags”
+3. Locate the list named “reviewers_list” inside the ready function 
+4. Edit the list to include the tag labels as strings (i.e. the reviewer names) that you would like to add from the backend
+5. Once you start up Mayan again, your new tags should be reflected on the webpage.
   
 **Quality Assurance Measures:**
   - Check that all the added reviewers to the tags table in the database are displayed on Mayan website under “Tags” in the home page and on the tags webpage.
