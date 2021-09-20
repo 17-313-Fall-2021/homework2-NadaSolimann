@@ -75,10 +75,10 @@ class TagsApp(MayanAppConfig):
         # Adding tags from the backend 
         try: 
             # list of tags to be added 
-            user = ["Nada", "Erin", "Jumana", "Ira"]
-            for i in user: 
-                temp = Tag.objects.create(label=i, color="FFFFFF")
-                temp.save()
+            reviewers_list = ["Nada", "Erin", "Jumana", "Ira"]
+            for reviewer in reviewers_list: 
+                new_tag = Tag.objects.create(label=reviewer, color="FFFFFF")
+                new_tag.save()
         except: 
             pass
 
