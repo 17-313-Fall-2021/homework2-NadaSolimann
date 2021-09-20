@@ -1,16 +1,14 @@
-README
+Brief Overview of Repository:
+This repository module adds a method for reviewer assignment and management integrated with the Mayan EDMS software. This new feature makes use of Mayan’s existing tags implementation to allow for an automated and more efficient way to assign multiple reviewers to documents, view the assigned reviewers to a specific document, view the assigned documents to a specific reviewer and search through documents by reviewers. This is done through automating batch tag creation from the backend, where tags are automatically created in one batch for each reviewer in the reviewers list specified by the admin user in the code. This feature is meant for the use of managers and admins for reviewer management, but can also be used by regular users for faster batch tag creation.
 
-We have implemented a basic pane for reviewer dashboard and management using Mayan EDMS.
-On the Mayan website, under tags, you can choose among available tags (reviewers) which 
-ones to assign to each document you upload.
-
-
-The code for our feature can be found in mayan/apps/tags/apps.py 
-
-For now we have hard-coded the list of users in a list - to add new users
-simply add their names to the list "user". 
-After making the changes, run "make docker-build" and you should be able to see the changes.
-
-
-We hope to soon extend the feature to pulling user information from a database. 
-
+How to Use the Feature:
+  1. Navigate to the apps.py file under the directory “mayan/apps/tags”
+  2. Locate the list named “user” inside the ready function 
+  3. Edit the list to include the the tag labels (as strings) you would like to add from the backend 
+  
+Quality Assurance Measures:
+  - Check that all the added reviewers to the tags table in the database are displayed on Mayan website under “Tags” in the home page and on the tags webpage.
+  - Check that all Tags functionalities are still operational, that is, the user can add, edit and delete tags, search for tags, assign tags to documents 
+  - Check that there are no duplicate tags created . This is to avoid database table unique constraint conflicts.
+  - Check that the modified software does not cause a drop in Lighthouse scores, especially the Accessibility and Performance scores. 
+  - Check that the modified software passes all of Mayan’s pre-existing test cases in the “test.py” file under the “mayan/apps/tags” directory
