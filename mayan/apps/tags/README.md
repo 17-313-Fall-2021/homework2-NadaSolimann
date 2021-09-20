@@ -1,4 +1,4 @@
-**Brief Overview of Repository:**
+**Brief Overview of Repository:**  
 This repository module adds a method for reviewer assignment and management integrated with the Mayan EDMS software. This new feature makes use of Mayan’s existing tags implementation to allow for an automated and more efficient way to assign multiple reviewers to documents, view the assigned reviewers to a specific document, view the assigned documents to a specific reviewer and search through documents by reviewers. This is done through automating batch tag creation from the backend, where tags are automatically created in one batch for each reviewer in the reviewers list specified by the admin user in the code. This feature is meant for the use of managers and admins for reviewer management, but can also be used by regular users for faster batch tag creation.
 
 **How to Use the Feature:**
